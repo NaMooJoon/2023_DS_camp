@@ -61,9 +61,9 @@ Q. 무슨 문제가 있을까?
 
 프로그램 실행 시 운영체제에 의해서 마련되는 메모리 구조는 다음과 같이 네 개의 영역으로 구분 된다.
 
-![image-20230110013144539](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110013144539.png)
+![image-20230110013144539](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110013144539.png)
 
-- ##### 코드영역 (Code Area)
+- ##### 코드영역 (Code Area)/
 
   프로그램의 코드가 저장되는 메모리 공간이다.   
   따라서, CPU는 코드 영역에 저장된 명령문들을 하나씩 가져가서 실행한다.
@@ -107,17 +107,17 @@ void fct(int n) {
 }
 ```
 
-![image-20230110020019587](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110020019587.png)
+![image-20230110020019587](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020019587.png)
 
-![image-20230110020054443](image/:Users:joonk:development:DS_camp:day1:image:Users:joonk:Library:Application Support:typora-user-images:image-20230110020054443.png)
+![image-20230110020054443](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020107013.png)
 
-![image-20230110020107013](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110020107013.png)
+![image-20230110020107013](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020120178.png)
 
-![image-20230110020120178](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110020120178.png)
+![image-20230110020120178](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020140258.png)
 
-![image-20230110020140258](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110020140258.png)
+![image-20230110020140258](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020159492.png)
 
-![image-20230110020159492](image/:Users:joonk:Library:Application Support:typora-user-images:image-20230110020159492.png)
+![image-20230110020159492](https://github.com/NaMooJoon/2023_DS_camp/blob/main/day1/image/:Users:joonk:development:DS_camp:day1:image:Users:joonk:Library:Application%20Support:typora-user-images:image-20230110020054443.png)
 
 
 
