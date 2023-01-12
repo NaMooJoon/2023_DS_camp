@@ -68,9 +68,19 @@ void my_encode_head(FILE* output, int count, char* top) {
 void decompress_file(char* filename) 
 {
 	  char* top_char;
+  	int numOfChar;
   ...
     my_decode_head(input, &numOfChar, &top_char);
   	my_decode_body(input, output, numOfChar, top_char);
+}
+void my_decode_head(FILE* input, int* count, char** top_char)
+{
+		// top_char는 아직 메모리 할당이 되지 않은 상태.
+  		// char** 이중 포인터를 사용하지 않으면, 
+			// decompress_file함수에 char* top_char; 값이 업데이트 되지 않음(call by value).
+  	fread(count, sizeof(int), 1, input);  
+  	*top_char = malloc(sizeof(char) * (*count));
+  	fread(*top_char, sizeof(char), (*count), input);
 }
 ```
 
