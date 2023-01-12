@@ -19,6 +19,6 @@ BTreeNode* get_left_sub_tree(BTreeNode* bt);
 BTreeNode* get_right_sub_tree(BTreeNode* bt);
 
 void make_left_sub_tree(BTreeNode* main, BTreeNode* sub);
-void make_riht_sub_tree(BTreeNode* main, BTreeNode* sub);
+void make_right_sub_tree(BTreeNode* main, BTreeNode* sub);
 
 #endif
