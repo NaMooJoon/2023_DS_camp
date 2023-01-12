@@ -67,9 +67,10 @@ void my_encode_head(FILE* output, int count, char* top) {
 ```c
 void decompress_file(char* filename) 
 {
+	  char* top_char;
   ...
-    my_decode_head(input);
-  	my_decode_body(input, )
+    my_decode_head(input, &numOfChar, top_char);
+  	my_decode_body(input, output, numOfChar, top_char);
 }
 ```
 
