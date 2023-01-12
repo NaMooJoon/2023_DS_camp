@@ -39,7 +39,7 @@ Data dequeue(Queue * pq)
 	Node * delNode;
 	Data retData;
 
-	if(QIsEmpty(pq))
+	if(q_is_empty(pq))
 	{
 		printf("Queue Memory Error!");
 		exit(-1);
@@ -55,7 +55,7 @@ Data dequeue(Queue * pq)
 
 Data q_peek(Queue * pq)
 {
-	if(QIsEmpty(pq))
+	if(q_is_empty(pq))
 	{
 		printf("Queue Memory Error!");
 		exit(-1);
