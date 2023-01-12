@@ -1,5 +1,7 @@
 ## Binary Tree
 
+![binary tree](https://miro.medium.com/max/1400/1*CMGFtehu01ZEBgzHG71sMg.webp)
+
 ### Header
 
 ```c
