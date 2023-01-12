@@ -69,7 +69,7 @@ void decompress_file(char* filename)
 {
 	  char* top_char;
   ...
-    my_decode_head(input, &numOfChar, top_char);
+    my_decode_head(input, &numOfChar, &top_char);
   	my_decode_body(input, output, numOfChar, top_char);
 }
 ```
