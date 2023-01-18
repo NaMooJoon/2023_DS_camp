@@ -46,6 +46,8 @@ void my_encode_head(FILE* output, int count, char* top) {
 
 
 
+---
+
 ### decompress
 
 1. NIV.txt.myzip 파일을 읽는다.
@@ -53,7 +55,7 @@ void my_encode_head(FILE* output, int count, char* top) {
    NIV.txt.myzip에 맨 처음에 있는 데이터 참조해서(head부분)
 3. Binary tree를 만든다. (15개라면 16개 만들어야하니, 4층짜리 tree를 만들면 되겠죠?)
 4. 각 Binary tree에 terminal 노드를 맨 왼쪽부터 차례대로 top_char들을 넣어준다.
-   TreeNode의 데이터가 char가 되는 겁니다.
+   (TreeNode의 데이터가 char가 되는 겁니다.)
 5. NIV.txt.myzip의 body부분을 읽어서 하나씩 버퍼에 넣는다.
    1. 새롭게 decode할때, 처음 bit가 0이라면, 그대로 8개의 bit를 읽어서 출력하면 되고,
    2. 새롭게 decode할때, 처음 bit가 1이라면, 3-4번에서 만든 tree를 따라 이동하면서 terminal node를 만날때 까지 이동하여 해당 data를 알아낸다.
@@ -73,11 +75,14 @@ void decompress_file(char* filename)
     my_decode_head(input, &numOfChar, &top_char);
   	my_decode_body(input, output, numOfChar, top_char);
 }
+
+/**
+* top_char는 아직 메모리 할당이 되지 않은 상태.
+* char** 이중 포인터를 사용하지 않으면,
+* decompress_file함수에 char* top_char; 값이 업데이트 되지 않음(call by value).
+*/
 void my_decode_head(FILE* input, int* count, char** top_char)
 {
-		// top_char는 아직 메모리 할당이 되지 않은 상태.
-  		// char** 이중 포인터를 사용하지 않으면, 
-			// decompress_file함수에 char* top_char; 값이 업데이트 되지 않음(call by value).
   	fread(count, sizeof(int), 1, input);  
   	*top_char = malloc(sizeof(char) * (*count));
   	fread(*top_char, sizeof(char), (*count), input);
