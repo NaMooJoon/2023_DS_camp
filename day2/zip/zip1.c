@@ -116,6 +116,7 @@ void my_encode_body(FILE* input, FILE* output)
 	Buffer my_buffer;
 	int byte;
 
+	buffer_set(&my_buffer, 0, 0);
 	while (1)
 	{
 		byte = fgetc(input);
